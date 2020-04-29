@@ -26,17 +26,21 @@ public class People {
     public String getHairColor() { return hairColor; }
     public String getSkinColor() { return skinColor; }
     public String getEyeColor() { return eyeColor; }
+    public String getGender() { return gender; }
     public int getPlanetId() { return planetId; }
 
 
-    public void setId() { this.id = id; }
-    public void setName() { this.name = name; }
-    public void setHeight() { this.height = height; }
-    public void setMass() { this.mass = mass; }
-    public void setHairColor() { this.hairColor = hairColor; }
-    public void setSkinColor() { this.skinColor = skinColor; }
-    public void setEyeColor() { this.eyeColor = eyeColor; }
-    public void setPlanetId() { this.planetId = planetId; }
+    public void setId(int id) { this.id = id; }
+    public void setName(String name) { this.name = name; }
+    public void setHeight(int height) { this.height = height; }
+    public void setMass(float mass) { this.mass = mass; }
+    public void setHairColor(String hairColor) { this.hairColor = hairColor; }
+    public void setSkinColor(String skinColor) { this.skinColor = skinColor; }
+    public void setEyeColor(String eyeColor) { this.eyeColor = eyeColor; }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    public void setPlanetId(int planetId) { this.planetId = planetId; }
 
 
 }
