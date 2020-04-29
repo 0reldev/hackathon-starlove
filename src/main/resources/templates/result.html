@@ -2,30 +2,36 @@
 <html lang="fr" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Résultat</title>
+    <title>index</title>
+    <link href = "https://fonts.googleapis.com/css2? family = Pacifico & display = swap" rel = "stylesheet">
     <link th:href="@{css/style.css}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
 </head>
 <body>
-<header th:replace="fragments/header :: header"></header>
+<header th:replace="fragments/header :: header">
 
-<section class="profile"> Profile with data informations </section>
-
-    <h2>Votre proposition</h2>
-
-    <div> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
-        <ul th:object="${people}">
-            <li th:text="|Nom : *{name}|"> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
-            <li th:text="|Planète : *{planetName}|"> Planète : Naboo </li> <!-- TODO : remplacer par la base de données -->
-            <li th:text="|Couleur des yeux : *{eyeColor}|"> Yeux : marron </li> <!-- TODO : remplacer par la base de données -->
-            <li th:text="|Genre : *{gender}|"> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
-        </ul>
-
-        </ul>
-    </div>
-    <p>
-        <a th:href="@{/index}" class="button">Recommencer</a>
-    </p>
-
-
+</header>
+<div class="bloc-all-result">
+    <section class="result">
+        <div class="profile">
+            <h2>Votre proposition</h2>
+        </div>
+        <div class="bloc-result"> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
+            <ul th:object="${people}">
+                <li>Nom</li>
+                <li th:text="*{name}"> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
+                <li>Planète</li>
+                <li th:text="*{planetName}"> Planète : Naboo </li> <!-- TODO : remplacer par la base de données -->
+                <li>Couleur des yeux</li>
+                <li th:text="*{eyeColor}"> Yeux : marron </li> <!-- TODO : remplacer par la base de données -->
+                <li>Genre</li>
+                <li th:text="*{gender}"> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
+            </ul>
+        </div>
+        <div class="lien-result">
+            <a th:href="@{/index}" class="button">Recommencer</a>
+        </div>
+    </section>
+</div>
 </body>
 </html>
