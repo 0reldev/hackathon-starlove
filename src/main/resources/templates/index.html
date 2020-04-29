@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>index</title>
@@ -7,5 +7,18 @@
     <meta name="viewport" content="width=device-width,user-scalable=no">
 </head>
 <header th:replace="fragments/header :: header"></header>
+
+<section class="findInUniverse"></section> <!-- TODO: remplacer par un bouton -->
+
+    <a th:href="@{/result}">Trouver l'amour !</a> <!-- TODO: remplacer par un bouton -->
+
+<section class="findInPlanet"></section>
+
+<section class="findOnCriterion"></section>
+
+
+
+
+
 </body>
 </html>

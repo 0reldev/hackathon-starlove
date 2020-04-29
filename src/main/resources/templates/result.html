@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Résultat</title>
+    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css">
 </head>
 <body>
+<header th:replace="fragments/header :: header"></header>
+
+<section class="profile"> Profile with data informations </section>
+
+    <h2>Votre proposition</h2>
+
+    <div> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
+        <ul>
+            <li> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
+            <li> Planète : Naboo </li> <!-- TODO : remplacer par la base de données -->
+            <li> Yeux : marron </li> <!-- TODO : remplacer par la base de données -->
+            <li> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
+        </ul>
+
+        </ul>
+    </div>
+
+    <input class="button" type="submit" value="tryAgain">
+
 
 </body>
 </html>
