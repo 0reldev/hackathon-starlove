@@ -5,10 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class Star_wars {
+public class MainController {
 
     @GetMapping("/index")
-    public String showIndexAccueil() {
+    public String showIndex() {
         return "index";
     }
+
+    @GetMapping("/result")
+    public String showResult() {
+        return "result";
+    }
+
 }
+
+
