@@ -1,6 +1,9 @@
 package com.wildcodeschool.hackathon_star_love.entity;
 
 public class People {
+
+
+
     private int id;
     private String name;
     private int height;
