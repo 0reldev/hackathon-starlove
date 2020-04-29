@@ -11,14 +11,14 @@ import java.util.List;
 @Controller
 public class JDBCController {
 
-    private PeopleRepository repository = new PeopleRepository();
+    /*private PeopleRepository repository = new PeopleRepository();
 
     @GetMapping("/peopleList")
     @ResponseBody
-    public List<People> getFindLoveGlobal() {
+    public People getFindLoveGlobal() {
 
         return repository.findLoveGlobal();
-    }
+    }*/
 
 
 
