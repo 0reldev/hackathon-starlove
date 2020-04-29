@@ -19,7 +19,7 @@ public class PeopleRepository {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 
-            String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE people.id = 4 ;";
+            String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id ORDER BY rand() LIMIT 1;";
             PreparedStatement statement = connection.prepareStatement(request);
 
             ResultSet resultSet = statement.executeQuery();
