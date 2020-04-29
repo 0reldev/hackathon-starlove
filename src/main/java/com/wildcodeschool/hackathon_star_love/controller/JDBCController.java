@@ -15,10 +15,11 @@ public class JDBCController {
 
     @GetMapping("/peopleList")
     @ResponseBody
-    public List<People>  getFindLoveGlobal() {
+    public List<People> getFindLoveGlobal() {
 
         return repository.findLoveGlobal();
     }
+
 
 
 }

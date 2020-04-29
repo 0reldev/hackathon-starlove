@@ -12,12 +12,11 @@ public class People {
     private String skinColor;
     private String eyeColor;
     private String gender;
-    private int planetId;
+    private String planetName;
 
 
     public People() {
     }
-
 
     public int getId() { return id; }
     public String getName() { return name; }
@@ -27,8 +26,7 @@ public class People {
     public String getSkinColor() { return skinColor; }
     public String getEyeColor() { return eyeColor; }
     public String getGender() { return gender; }
-    public int getPlanetId() { return planetId; }
-
+    public String getPlanetName() { return planetName; }
 
     public void setId(int id) { this.id = id; }
     public void setName(String name) { this.name = name; }
@@ -40,7 +38,7 @@ public class People {
     public void setGender(String gender) {
         this.gender = gender;
     }
-    public void setPlanetId(int planetId) { this.planetId = planetId; }
+    public void setPlanetName(String planetName) { this.planetName = planetName; }
 
 
 }
