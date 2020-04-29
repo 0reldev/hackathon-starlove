@@ -13,17 +13,18 @@
     <h2>Votre proposition</h2>
 
     <div> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
-        <ul>
-            <li th:text="${people.getName()}"> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
-            <li> Planète : Naboo </li> <!-- TODO : remplacer par la base de données -->
-            <li> Yeux : marron </li> <!-- TODO : remplacer par la base de données -->
-            <li> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
+        <ul th:object="${people}">
+            <li th:text="|Nom : *{name}|"> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
+            <li th:text="|Planète : *{planetName}|"> Planète : Naboo </li> <!-- TODO : remplacer par la base de données -->
+            <li th:text="|Couleur des yeux : *{eyeColor}|"> Yeux : marron </li> <!-- TODO : remplacer par la base de données -->
+            <li th:text="|Genre : *{gender}|"> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
         </ul>
 
         </ul>
     </div>
-
-    <input class="button" type="submit" value="tryAgain">
+    <p>
+        <a th:href="@{/index}" class="button">Recommencer</a>
+    </p>
 
 
 </body>

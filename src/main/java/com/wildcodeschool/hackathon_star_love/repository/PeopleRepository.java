@@ -12,9 +12,9 @@ public class PeopleRepository {
     private static final String USER = "starWarsUser";
     private static final String PASSWORD = "starWarsPassword$";
 
-    public List<People> findLoveGlobal() {
+    public People findLoveGlobal() {
 
-        List<People> peopleList = new ArrayList<>();
+
 
         try {
             Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
@@ -45,12 +45,12 @@ public class PeopleRepository {
                 people.setGender(gender);
                 people.setPlanetName(planetName);
 
-                peopleList.add(people);
+                return people;
             }
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return peopleList;
+        return null;
     }
 }
