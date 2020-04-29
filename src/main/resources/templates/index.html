@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <link href = "https://fonts.googleapis.com/css2? family = Pacifico & display = swap" rel = "stylesheet">
     <link th:href="@{css/style.css}" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width,user-scalable=no">
 </head>
-<header th:replace="fragments/header :: header"></header>
+<body>
+<header th:replace="fragments/header :: header">
 
-<section class="findInUniverse" th:replace="fragments/partie1 :: partie1"></section> <!-- TODO: implémenter un fraggment -->
+</header>
+<div class="bloc-all-part">
+    <section class="findInUniverse">
+        <div class="bloc-part1">
+            <div class="h2-part1">
+                <h2>Dans l'Univers</h2>
+            </div>
+            <div class="lien-part1">
+                <a th:href="@{/result}">Trouver l'amour !</a>
+            </div>
+        </div>
+    </section> <!-- TODO: implémenter un fraggment -->
 
-    <a th:href="@{/result}">Trouver l'amour !</a> <!-- TODO: remplacer par un bouton -->
+     <!-- TODO: remplacer par un bouton -->
 
 <section class="findInPlanet"></section>
 
 <section class="findOnCriterion"></section>
-
+</div>
 
 
 
