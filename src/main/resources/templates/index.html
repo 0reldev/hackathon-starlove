@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>index</title>
+    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
 </head>
-<body>
-$END$
+<header th:replace="fragments/header :: header"></header>
 </body>
 </html>
