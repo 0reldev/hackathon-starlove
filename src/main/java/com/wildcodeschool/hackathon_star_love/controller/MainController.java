@@ -5,6 +5,8 @@ import com.wildcodeschool.hackathon_star_love.repository.PeopleRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -20,12 +22,25 @@ public class MainController {
     @GetMapping("/result")
     public String showResult(Model out) {
 
+        PeopleRepository repository = new PeopleRepository();
 
         People people = repository.findLoveGlobal();
         out.addAttribute("people", people);
 
         return "result";
     }
+
+    @PostMapping("/result")
+    public String postPeople(Model out, @RequestParam String planetName) {
+
+        PeopleRepository repository = new PeopleRepository();
+
+        People people = repository.findLovePlanet();
+        out.addAttribute("people", people);
+
+        return "result";
+    }
+
 
 
 
