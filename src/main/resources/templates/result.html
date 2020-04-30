@@ -14,11 +14,14 @@
 
 <div class="bloc-all-result">
     <section class="result">
-        <div class="profile">
+        <div class="profile" th:if="${people != null}">
             <h2>Votre moitié</h2>
         </div>
-        <div class="bloc-result"> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
-            <ul th:object="${people}">
+        <div class="profile" th:if="${people == null}">
+            <h2>Désolé aucune moitié ne correspond à vos critères</h2>
+        </div>
+        <div class="bloc-result" th:if="${people != null}"> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
+            <ul th:object="${people}" >
                 <li>Nom</li>
                 <li th:text="*{name}"> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
                 <li>Planète</li>
@@ -29,6 +32,7 @@
                 <li th:text="*{gender}"> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
             </ul>
         </div>
+
         <div class="lien-result">
             <a th:href="@{/index}" class="button">Recommencer</a>
         </div>
