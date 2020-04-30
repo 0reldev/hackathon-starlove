@@ -96,4 +96,48 @@ public class PeopleRepository {
         }
         return null;
     }
+
+    public People findLoveChoice(String planetName, String gender, String eyeColor, String hairColor) {
+
+
+
+        try {
+            Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+
+            String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name = ? AND people.gender = ? AND people.eye_color = ?" +
+                    "AND people.hair_color = ? ORDER BY rand() LIMIT 1;";
+            PreparedStatement statement = connection.prepareStatement(request);
+
+            statement.setString(1, planetName);
+            statement.setString(2, gender);
+            statement.setString(3, eyeColor);
+            statement.setString(4, hairColor);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("people.name");
+                int height = resultSet.getInt("height");
+                float mass = resultSet.getFloat("mass");
+                String skinColor = resultSet.getString("skin_color");
+                String origin = resultSet.getString("origin");
+
+                People people = new People();
+                people.setId(id);
+                people.setName(name);
+                people.setHeight(height);
+                people.setMass(mass);
+                people.setHairColor(hairColor);
+                people.setSkinColor(skinColor);
+                people.setEyeColor(eyeColor);
+                people.setGender(gender);
+                people.setPlanetName(origin);
+
+                return people;
+            }
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

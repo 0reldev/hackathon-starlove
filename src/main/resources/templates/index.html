@@ -102,12 +102,123 @@
         </div>
     </section>
 
-<section class="findOnCriterion"></section>
+<section class="findOnCriterion">
+    <div class="bloc-part3">
+        <div class="h2-part3">
+            <h2>Avec vos critères</h2>
+        </div>
+        <div class="form-part3">
+            <form action="/result-3" method="get">
+                <div class="choicePlanet">
+                    <label for="planetName">Planète</label><br />
+                    <select name="planetName" id="planetName" required>
+                        <option value="Tatooine">Tatooine</option>
+                        <option value="Alderaan">Alderaan</option>
+                        <option value="Yavin IV">Yavin IV</option>
+                        <option value="Hoth">Hoth</option>
+                        <option value="Dagobah">Dagobah</option>
+                        <option value="Bespin">Bespin</option>
+                        <option value="Endor">Endor</option>
+                        <option value="Naboo">Naboo</option>
+                        <option value="Coruscant">Coruscant</option>
+                        <option value="Kamino">Kamino</option>
+                        <option value="Geonosis">Geonosis</option>
+                        <option value="Utapau">Utapau</option>
+                        <option value="Mustafar">Mustafar</option>
+                        <option value="Kashyyyk">Kashyyyk</option>
+                        <option value="Polis Massa">Polis Massa</option>
+                        <option value="Mygeeto">Mygeeto</option>
+                        <option value="Felucia">Felucia</option>
+                        <option value="Cato Neimoidia">Cato Neimoidia</option>
+                        <option value="Saleucami">Saleucami </option>
+                        <option value="Stewjon">Stewjon</option>
+                        <option value="Eriadu">Eriadu</option>
+                        <option value="Corellia">Corellia</option>
+                        <option value="Rodia">Rodia</option>
+                        <option value="Nal Hutta">Nal Hutta</option>
+                        <option value="Dantooine">Dantooine</option>
+                        <option value="Bestine IV">Bestine IV</option>
+                        <option value="Ord Mantell">Ord Mantell</option>
+                        <option value="Unknown">Unknown</option>
+                        <option value="Trandosha">Trandosha</option>
+                        <option value="Socorro">Socorro</option>
+                        <option value="Mon Cala">Mon Cala</option>
+                        <option value="Chandrila">Chandrila</option>
+                        <option value="Sullust">Sullust</option>
+                        <option value="Toydaria">Toydaria</option>
+                        <option value="Malastare">Malastare</option>
+                        <option value="Dathomir">Dathomir</option>
+                        <option value="Ryloth">Ryloth</option>
+                        <option value="Aleen Minor">Aleen Minor</option>
+                        <option value="Vulpter">Vulpter</option>
+                        <option value="Troiken">Troiken</option>
+                        <option value="Tund">Tund</option>
+                        <option value="Haruun Kal">Haruun Kal</option>
+                        <option value="Cerea">Cerea</option>
+                        <option value="Glee Anselm">Glee Anselm</option>
+                        <option value="Iridonia">Iridonia</option>
+                        <option value="Tholoth">Tholoth</option>
+                        <option value="Iktotch">Iktotch</option>
+                        <option value="Quermia">Quermia</option>
+                        <option value="Dorin">Dorin</option>
+                        <option value="Champala">Champala</option>
+                        <option value="Mirial">Mirial</option>
+                        <option value="Serenno">Serenno</option>
+                        <option value="Concord Dawn">Concord Dawn</option>
+                        <option value="Zolan">Zolan</option>
+                        <option value="Ojom">Ojom</option>
+                        <option value="Skako">Skako</option>
+                        <option value="Muunilinst">Muunilinst</option>
+                        <option value="Shili">Shili</option>
+                        <option value="Kalee">Kalee</option>
+                        <option value="Umbara">Umbara</option>
+                        <option value="Jakku">Jakku</option>
+                    </select>
+                </div>
+                <div class="choice-genre">
+                    <label for="gender">Genre</label><br />
+                    <select name="gender" id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="n/a">N/a</option>
+                        <option value="hermaphrodite">Hermaphrodite</option>
+                    </select>
+                </div>
+                <div class="choice-eye-color">
+                    <label for="eyeColor">Eye color</label><br />
+                    <select name="eyeColor" id="eyeColor">
+                        <option value="blue">Blue</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="red">Red</option>
+                        <option value="brown">Brown</option>
+                        <option value="blue-gray">Blue-gray</option>
+                        <option value="black">Black</option>
+                        <option value="orange">Orange</option>
+                        <option value="hazel">Hazel</option>
+                        <option value="pink">Pink</option>
+                        <option value="gold">Gold</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+                <div class="choice-hair-color">
+                    <label for="hairColor">Hair color</label><br />
+                    <select name="hairColor" id="hairColor">
+                        <option value="blond">Blond</option>
+                        <option value="brown">Brown</option>
+                        <option value="grey">Grey</option>
+                        <option value="black">Black</option>
+                        <option value="auburn">Auburn</option>
+                        <option value="white">White</option>
+                        <option value="blonde">Blonde</option>
+                    </select>
+                </div>
+                <div class="button-choice">
+                    <input th:href="@{/result}" type="submit" value="Trouvez l'amour!">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 </div>
-
-
-
-
-
 </body>
 </html>
