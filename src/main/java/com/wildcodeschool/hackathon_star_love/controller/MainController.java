@@ -41,6 +41,18 @@ public class MainController {
         return "result";
     }
 
+    @GetMapping("/result-3")
+    public String showPeopleChoice(Model out, @RequestParam String planetName,
+                                   @RequestParam String gender, @RequestParam String eyeColor, @RequestParam String hairColor) {
+
+        PeopleRepository repository = new PeopleRepository();
+
+        People people = repository.findLoveChoice(planetName, gender, eyeColor, hairColor);
+        out.addAttribute("people", people);
+
+        return "result";
+    }
+
 }
 
 

@@ -144,3 +144,36 @@ li:nth-child(8) {
     color: white;
     font-size: 1rem;
 }
+.bloc-part3 {
+    background-image: url("/personnage.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18rem;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+}
+.h2-part3 h2 {
+    margin: 0px;
+    color: black;
+    margin-bottom: 1rem;
+}
+.choicePlanet select {
+    margin-top: 0px;
+}
+.form-part3 select{
+    margin-bottom: 0.7rem;
+    width: 10rem;
+    height: 1.5rem;
+}
+.button-choice input {
+
+    background-color: deeppink;
+    padding: 1.4rem;
+    border-radius: 10px;
+    border-color: deeppink;
+    width: 12rem;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
