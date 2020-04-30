@@ -130,8 +130,9 @@ li:nth-child(8) {
 .choicePlanet select {
     margin-top: 3rem;
     width: 10rem;
-    border-radius: 5px;
+    border-radius: 10px;
     height: 1.5rem;
+    background-color: white;
 }
 .button-planet input {
     margin-top: 4rem;
@@ -165,6 +166,8 @@ li:nth-child(8) {
     margin-bottom: 0.7rem;
     width: 10rem;
     height: 1.5rem;
+    border-radius: 10px;
+    background-color: white;
 }
 .button-choice input {
 
