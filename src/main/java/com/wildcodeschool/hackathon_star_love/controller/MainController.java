@@ -42,8 +42,8 @@ public class MainController {
     }
 
     @GetMapping("/result-3")
-    public String showPeopleChoice(Model out, @RequestParam String planetName,
-                                   @RequestParam String gender, @RequestParam String eyeColor, @RequestParam String hairColor) {
+    public String showPeopleChoice(Model out, @RequestParam (required = false) String planetName,
+                                   @RequestParam (required = false) String gender, @RequestParam (required = false) String eyeColor, @RequestParam (required = false) String hairColor) {
 
         PeopleRepository repository = new PeopleRepository();
 
@@ -52,6 +52,7 @@ public class MainController {
 
         return "result";
     }
+
 
 }
 
