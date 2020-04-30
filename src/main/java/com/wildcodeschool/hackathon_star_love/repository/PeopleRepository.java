@@ -54,16 +54,17 @@ public class PeopleRepository {
         return null;
     }
 
-    public People findLovePlanet() {
+    public People findLovePlanet(String planetName) {
 
 
 
         try {
             Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 
-            String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id ORDER BY rand() LIMIT 1;";
+            String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name = ? ORDER BY rand() LIMIT 1;";
             PreparedStatement statement = connection.prepareStatement(request);
 
+            statement.setString(1, planetName);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -74,7 +75,7 @@ public class PeopleRepository {
                 String skinColor = resultSet.getString("skin_color");
                 String eyeColor = resultSet.getString("eye_color");
                 String gender = resultSet.getString("gender");
-                String planetName = resultSet.getString("origin");
+                String origin = resultSet.getString("origin");
 
                 People people = new People();
                 people.setId(id);
@@ -85,7 +86,7 @@ public class PeopleRepository {
                 people.setSkinColor(skinColor);
                 people.setEyeColor(eyeColor);
                 people.setGender(gender);
-                people.setPlanetName(planetName);
+                people.setPlanetName(origin);
 
                 return people;
             }

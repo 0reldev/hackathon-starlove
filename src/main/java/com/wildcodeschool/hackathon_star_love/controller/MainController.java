@@ -30,19 +30,16 @@ public class MainController {
         return "result";
     }
 
-    @PostMapping("/result")
-    public String postPeople(Model out, @RequestParam String planetName) {
+    @GetMapping("/result-bis")
+    public String showPeople(Model out, @RequestParam String planetName) {
 
         PeopleRepository repository = new PeopleRepository();
 
-        People people = repository.findLovePlanet();
+        People people = repository.findLovePlanet(planetName);
         out.addAttribute("people", people);
 
         return "result";
     }
-
-
-
 
 }
 
