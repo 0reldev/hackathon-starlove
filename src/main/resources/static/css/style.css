@@ -1,5 +1,4 @@
 body {
-    font-family: 'Pacifico', sans-serif;
     background-color: black;
 }
 
@@ -20,6 +19,12 @@ header {
 .text-header {
     margin-top: 2rem;
 }
+.text-header p {
+    text-align: center;
+}
+.h1 h1 {
+    text-align: center;
+}
 .bloc-all-part {
     display: flex;
     justify-content: center;
@@ -31,7 +36,6 @@ header {
     background-image: url("/univers.jpeg");
     width: 24rem;
     height: 20rem;
-
     text-align: center;
     color: white;
 }
@@ -179,4 +183,69 @@ li:nth-child(8) {
     color: white;
     font-size: 1rem;
     margin-top: 1rem;
+}
+@media only screen and (min-width: 768px) {
+
+    header {
+        background-image: url("/jarjar-and-queen-julia.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        color: white;
+        font-size: 3rem;
+        height: 60vh;
+    }
+    .text-header {
+        margin-top: 4rem;
+    }
+    .bloc-part1 {
+        background-image: url("/univers.jpeg");
+        width: 90rem;
+        height: 30rem;
+        text-align: center;
+        color: white;
+    }
+    .h2-part1 h2 {
+        font-size: 4rem;
+    }
+    .lien-part1 {
+        background-color: deeppink;
+        padding: 1.5rem;
+        margin: 35rem;
+        margin-top: 7rem;
+        border-radius: 10px;
+    }
+    .bloc-part2 {
+        background-size:cover;
+        width: 90rem;
+        height: 30rem;
+    }
+    .h2-part2 h2 {
+        font-size: 4rem;
+    }
+    .choicePlanet select {
+        height: 2.5rem;
+    }
+    .button-planet input {
+        width: 18rem;
+    }
+    .bloc-part3 {
+        width: 85rem;
+        margin-top: 3rem;
+    }
+    .h2-part3 h2 {
+        font-size: 4rem;
+        color: white;
+    }
+    .choice-genre select, .choice-eye-color select, .choice-hair-color select {
+        height: 2.5rem;
+    }
+    .button-choice input {
+        width: 18rem;
+    }
+    .bloc-all-result {
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
