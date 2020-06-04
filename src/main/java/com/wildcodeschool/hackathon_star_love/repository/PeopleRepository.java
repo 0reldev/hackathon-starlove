@@ -1,23 +1,27 @@
 package com.wildcodeschool.hackathon_star_love.repository;
 
 import com.wildcodeschool.hackathon_star_love.entity.People;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class PeopleRepository {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/star_wars?serverTimezone=Europe/Paris";
-    private static final String USER = "starWarsUser";
-    private static final String PASSWORD = "starWarsPassword$";
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     public People findLoveGlobal() {
 
-
-
         try {
-            Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
 
             String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id ORDER BY rand() LIMIT 1;";
             PreparedStatement statement = connection.prepareStatement(request);
@@ -59,7 +63,7 @@ public class PeopleRepository {
 
 
         try {
-            Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
 
             String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name = ? ORDER BY rand() LIMIT 1;";
             PreparedStatement statement = connection.prepareStatement(request);
@@ -102,7 +106,7 @@ public class PeopleRepository {
 
 
         try {
-            Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
 
             String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name = ? AND people.gender = ? AND people.eye_color = ?" +
                     "AND people.hair_color = ? ORDER BY rand() LIMIT 1;";
