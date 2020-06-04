@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link href = "https://fonts.googleapis.com/css2? family = Pacifico & display = swap" rel = "stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+</head>
+<body>
+<header th:replace="fragments/header :: header">
+
+</header>
+
+<div class="bloc-all-result">
+    <section class="result">
+        <div class="profile" th:if="${people != null}">
+            <h2>Votre moitié</h2>
+        </div>
+        <div class="profile" th:if="${people == null}">
+            <h2>Désolé aucune moitié ne correspond à vos critères</h2>
+        </div>
+        <div class="bloc-result" th:if="${people != null}"> <!-- TODO : rendre ce résultat dynamique avec une requête SQL -->
+            <ul th:object="${people}" >
+                <li>Nom</li>
+                <li th:text="*{name}"> Nom : Padmé Amidala</li> <!-- TODO : remplacer par la base de données -->
+                <li>Planète</li>
+                <li th:text="*{planetName}"> Planète : Naboo </li> <!-- TODO : remplacer par la base de données -->
+                <li>Couleur des yeux</li>
+                <li th:text="*{eyeColor}"> Yeux : marron </li> <!-- TODO : remplacer par la base de données -->
+                <li>Genre</li>
+                <li th:text="*{gender}"> Genre : femelle </li> <!-- TODO : remplacer par la base de données -->
+            </ul>
+        </div>
+
+        <div class="lien-result">
+            <a th:href="@{/index}" class="button">Recommencer</a>
+        </div>
+    </section>
+</div>
+</body>
+</html>
