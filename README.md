@@ -18,7 +18,7 @@ The topic was free. We chose to make a love application to find a fictional part
 - **Time constraint**: 2 days
 - **Languages and frameworks**: Java and Spring JDBC
 - **Support**: for mobiles only (not for desktops)
-- **Database**: the given Star Wars databse has to be used
+- **Database**: the given Star Wars database has to be used
 
 #### Working conditions
 
