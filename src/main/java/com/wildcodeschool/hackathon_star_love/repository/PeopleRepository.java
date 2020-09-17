@@ -21,13 +21,13 @@ public class PeopleRepository {
     public People findLoveGlobal() {
 
         try {
-            Connection connection = jdbcTemplate.getDataSource().getConnection();
 
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id ORDER BY rand() LIMIT 1;";
             PreparedStatement statement = connection.prepareStatement(request);
-
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
+
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("people.name");
                 int height = resultSet.getInt("height");
@@ -53,6 +53,7 @@ public class PeopleRepository {
             }
             connection.close();
         } catch (SQLException e) {
+
             e.printStackTrace();
         }
         return null;
@@ -60,9 +61,8 @@ public class PeopleRepository {
 
     public People findLovePlanet(String planetName) {
 
-
-
         try {
+
             Connection connection = jdbcTemplate.getDataSource().getConnection();
 
             String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name = ? ORDER BY rand() LIMIT 1;";
@@ -71,6 +71,7 @@ public class PeopleRepository {
             statement.setString(1, planetName);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
+
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("people.name");
                 int height = resultSet.getInt("height");
@@ -96,6 +97,7 @@ public class PeopleRepository {
             }
             connection.close();
         } catch (SQLException e) {
+
             e.printStackTrace();
         }
         return null;
@@ -103,9 +105,8 @@ public class PeopleRepository {
 
     public People findLoveChoice(String planetName, String gender, String eyeColor, String hairColor) {
 
-
-
         try {
+
             Connection connection = jdbcTemplate.getDataSource().getConnection();
 
             String request = "SELECT people.*, planet.name AS origin FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name = ? AND people.gender = ? AND people.eye_color = ?" +
@@ -118,6 +119,7 @@ public class PeopleRepository {
             statement.setString(4, hairColor);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
+
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("people.name");
                 int height = resultSet.getInt("height");
@@ -140,6 +142,7 @@ public class PeopleRepository {
             }
             connection.close();
         } catch (SQLException e) {
+
             e.printStackTrace();
         }
         return null;

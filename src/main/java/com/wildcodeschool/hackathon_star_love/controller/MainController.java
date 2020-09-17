@@ -26,7 +26,6 @@ public class MainController {
 
         People people = repository.findLoveGlobal();
         out.addAttribute("people", people);
-
         return "result";
     }
 
@@ -35,21 +34,20 @@ public class MainController {
 
         People people = repository.findLovePlanet(planetName);
         out.addAttribute("people", people);
-
         return "result";
     }
 
     @GetMapping("/result-3")
-    public String showPeopleChoice(Model out, @RequestParam (required = false) String planetName,
-                                   @RequestParam (required = false) String gender, @RequestParam (required = false) String eyeColor, @RequestParam (required = false) String hairColor) {
+    public String showPeopleChoice(Model out,
+                                   @RequestParam (required = false) String planetName,
+                                   @RequestParam (required = false) String gender,
+                                   @RequestParam (required = false) String eyeColor,
+                                   @RequestParam (required = false) String hairColor) {
 
         People people = repository.findLoveChoice(planetName, gender, eyeColor, hairColor);
         out.addAttribute("people", people);
-
         return "result";
     }
-
-
 }
 
 

@@ -3,10 +3,10 @@ package com.wildcodeschool.hackathon_star_love.entity;
 public class Planet {
 
     private int id;
+
     private String name;
 
     public Planet() {
-
     }
 
     public int getId() {
