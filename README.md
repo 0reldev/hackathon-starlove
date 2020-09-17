@@ -41,7 +41,7 @@ Three main features were developped:
 
 ##### Home page
 
-The three reasearch options ar available from the home page:
+The three reasearch options are available from the home page:
 
 ![screen capture](https://github.com/0reldev/hackathon-starlove/blob/dev/sc/screen-capture-1.png)
 ![screen capture](https://github.com/0reldev/hackathon-starlove/blob/dev/sc/screen-capture-2.png)
