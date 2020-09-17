@@ -32,7 +32,7 @@ This project was led in duo. Due to the lockdown, it has been led in **full remo
 
 #### User stories - Features summary
 
-Three main feature were developped:
+Three main features were developped:
 - **random research**: a user can find a random partner from the Star Wars Universe, whatever its gender, species or planet.
 - **research by place**: a user can find a random partner based on a specific planet, whatever its sex or species. 
 - **research by advanced criterion**: a user can find a random partner responding to four specific criterion: the planet, the gender, the eyes colour and the hair colour.
