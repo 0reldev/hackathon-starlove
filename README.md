@@ -28,6 +28,10 @@ This project was led in duo. Due to the lockdown, it has been led in **full remo
 - [Aurélien Lonni](https://github.com/0reldev)
 - [Swann Chevreau](https://github.com/swann44)
 
+
+#### Online version
+You can test this app [here](https://nts-java-2003-hck-starlove.javarover.wilders.dev/index).
+
 ### Presentation of the app
 
 #### User stories - Features summary
@@ -49,6 +53,4 @@ The three reasearch options are available from the home page:
 
 ##### Result example
 ![screen capture](https://github.com/0reldev/hackathon-starlove/blob/dev/sc/screen-capture-4.png)
-
-
 
