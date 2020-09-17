@@ -11,7 +11,7 @@ This is a small project for a Hackathon organized in the halfway point of the 5-
 A database of characters and planets from the Star Wars universe is given.
 The goal is to create a web application which handles this database. 
 
-The topic was free. We chose to make a love application to find a fictional partner from the Star Wars Universe according to specific criterion.
+The topic was free. We chose to make a love application to find a fictional partner from the Star Wars Universe according to specific criteria.
 
 #### Constraints
 
@@ -35,7 +35,7 @@ This project was led in duo. Due to the lockdown, it has been led in **full remo
 Three main features were developped:
 - **random research**: a user can find a random partner from the Star Wars Universe, whatever its gender, species or planet.
 - **research by place**: a user can find a random partner based on a specific planet, whatever its sex or species. 
-- **research by advanced criterion**: a user can find a random partner responding to four specific criterion: the planet, the gender, the eyes colour and the hair colour.
+- **research by advanced criteria**: a user can find a random partner responding to four specific criteria: the planet, the gender, the eyes colour and the hair colour.
 
 #### Screen captures
 
